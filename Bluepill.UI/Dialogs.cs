@@ -8,7 +8,7 @@ namespace Bluepill.UI
     {
         public static void ShowExceptionDialog(Exception ex)
         {
-            var dlg = new TaskDialog("Có lỗi đã xảy ra trong lúc chạy V7Tool", "V7Tool", "Something unexpected happened and we couldn't handle it. If your computer was in Setup Mode, your computer will now reboot into normal mode. If you were in the out of box experience before Setup Mode, you'll have to reinstall Windows.", CommonButton.Close, CommonIcon.Stop);
+            var dlg = new TaskDialog("Có lỗi đã xảy ra trong lúc chạy V7Tool", "V7Tool", "Có lỗi đã xảy ra và V7Tool không thể xử lý được. Nếu máy tính của bạn đang ở Chế độ Setup, máy tính của bạn sẽ khởi động lại ở chế độ bình thường. Nếu bạn đã mở OOBE trong/trước Setup, bạn sẽ phải cài đặt lại Windows.", CommonButton.Close, CommonIcon.Stop);
             dlg.ShowExpandedInfoInFooter = true;
             dlg.ExpandedControlText = "Details";
             dlg.ExpandedInformation = ex.ToString();
