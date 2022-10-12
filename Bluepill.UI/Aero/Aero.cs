@@ -18,13 +18,13 @@ namespace Bluepill.UI.Aero
 
         public void Initialize()
         {
-            dlg = new TaskDialog("Applying Bluepill", "Bluepill");
+            dlg = new TaskDialog("Đang cài đặt V7Tool", "V7Tool");
             dlg.AllowDialogCancellation = false;
             dlg.ShowProgressBar = true;
             dlg.ProgressBarMaxRange = 100;
             dlg.CustomButtons = new CustomButton[]
             {
-                new CustomButton(CommonButtonResult.Cancel, "Cancel")
+                new CustomButton(CommonButtonResult.Cancel, "Hủy bỏ")
             };
             dlg.EnableButton(2, false);
         }
