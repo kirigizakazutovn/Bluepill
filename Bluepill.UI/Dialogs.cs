@@ -8,7 +8,7 @@ namespace Bluepill.UI
     {
         public static void ShowExceptionDialog(Exception ex)
         {
-            var dlg = new TaskDialog("An unhandled exception has occured", "Bluepill", "Something unexpected happened and we couldn't handle it. If your computer was in Setup Mode, your computer will now reboot into normal mode. If you were in the out of box experience before Setup Mode, you'll have to reinstall Windows.", CommonButton.Close, CommonIcon.Stop);
+            var dlg = new TaskDialog("Có lỗi đã xảy ra trong lúc chạy V7Tool", "V7Tool", "Something unexpected happened and we couldn't handle it. If your computer was in Setup Mode, your computer will now reboot into normal mode. If you were in the out of box experience before Setup Mode, you'll have to reinstall Windows.", CommonButton.Close, CommonIcon.Stop);
             dlg.ShowExpandedInfoInFooter = true;
             dlg.ExpandedControlText = "Details";
             dlg.ExpandedInformation = ex.ToString();
@@ -26,17 +26,17 @@ namespace Bluepill.UI
 
         public static Choices ShowChoiceDialog()
         {
-            TaskDialog dlg = new TaskDialog("What do you want to do?", "Bluepill");
+            TaskDialog dlg = new TaskDialog("Bạn đang muốn làm gì dợ?", "V7Tool");
             dlg.CommonIcon = CommonIcon.None;
-            dlg.Content = "Please select one option from this list.";
+            dlg.Content = "Vui lòng chọn 1 lựa chọn bạn muốn";
             dlg.UseCommandLinks = true;
             dlg.EnableHyperlinks = true;
             dlg.AllowDialogCancellation = false;
             dlg.CustomButtons = new CustomButton[] {
-                new CustomButton(9, "Install Bluepill"),
-                new CustomButton(10, "Uninstall Bluepill"),
-                new CustomButton(11, "View status of Bluepill"),
-                new CustomButton(CommonButtonResult.Cancel, "Close Bluepill")
+                new CustomButton(9, "Cài đặt V7Tool"),
+                new CustomButton(10, "Gỡ cài đặt V7Tool"),
+                new CustomButton(11, "Xem trạng thái của V7Tool"),
+                new CustomButton(CommonButtonResult.Cancel, "Thoát V7Tool")
             };
 
             TaskDialogResult results = dlg.Show();
