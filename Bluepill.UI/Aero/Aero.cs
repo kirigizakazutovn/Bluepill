@@ -8,7 +8,7 @@ namespace Bluepill.UI.Aero
 
         public void Close()
         {
-            TaskDialog newDlg = new TaskDialog("Installation complete.", "Bluepill", "You can now log off and log back on.");
+            TaskDialog newDlg = new TaskDialog("Cài đặt thành công.", "V7Tool", "Tháo đĩa cài đặt V7Tool khỏi máy tính của bạn và khởi động lại. Ma thuật thần kì sẽ xuất hiện sau khi bạn khởi động lại PC! Cảm ơn bạn đã tin tưởng sử dụng sản phẩm này");
             newDlg.CustomButtons = new CustomButton[]
             {
                         new CustomButton(CommonButtonResult.Cancel, "Close")
